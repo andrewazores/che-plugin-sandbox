@@ -1,0 +1,15 @@
+endpoints:
+    - name: "test"
+      public: true
+      targetPort: 8080
+containers:
+    - name: foo
+      image: andrewazores/che-plugin-sandbox
+      volumes:
+          - mountPath: "/projects"
+            name: "projects"
+      ports:
+          - exposedPort: 8080
+editors:
+    - id: org.eclipse.che.editor.theia
+      plugins: [che-plugin-sandbox:1.0.0]
