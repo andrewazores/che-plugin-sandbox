@@ -16,7 +16,7 @@ export function start () {
         var data = JSON.parse(await request(options));
         theia.window.showInformationMessage(data);
       } catch (error) {
-        theia.window.showErrorMessage('Unable to invoke service request');
+        theia.window.showErrorMessage(`Unable to invoke service request: ${error}`);
         console.error(error);
       }
     }
