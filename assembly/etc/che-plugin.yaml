@@ -4,11 +4,8 @@ endpoints:
       targetPort: 8080
 containers:
     - name: foo
-      image: andrewazores/che-plugin-sandbox
-      volumes:
-          - mountPath: "/projects"
-            name: "projects"
-      ports:
+      image: andrewazores/che-plugin-sandbox:latest
+      volumes      ports:
           - exposedPort: 8080
 editors:
     - id: org.eclipse.che.editor.theia
