@@ -4,9 +4,9 @@ endpoints:
       targetPort: 8080
 containers:
     - name: foo
-      image: andrewazores/che-plugin-sandbox:latest
-      volumes      ports:
+      image: andrewazores/che-plugin-sandbox
+      ports:
           - exposedPort: 8080
 editors:
     - id: org.eclipse.che.editor.theia
-      plugins: [che-plugin-sandbox:1.0.0]
+      plugins: [theia-remote-service:1.0.0]

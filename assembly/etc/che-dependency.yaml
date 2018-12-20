@@ -1,4 +1,4 @@
 plugins:
-    - id: che-plugin-sandbox
+    - id: theia-remote-service
       version: 1.0.0
       location: /che_plugin_sandbox.theia
