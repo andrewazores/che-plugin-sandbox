@@ -14,7 +14,7 @@ fi
 
 echo "Creating tar"
 tar cvf che-plugin-sandbox.tar -C ../ui che_plugin_sandbox.theia
-pushd etc
+cd etc
 tar uvf ../che-plugin-sandbox.tar .
-popd
+cd ..
 gzip che-plugin-sandbox.tar
