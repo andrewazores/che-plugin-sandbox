@@ -13,7 +13,7 @@ export function start () {
         uri: 'http://test:8080/test'
       }
       try {
-        var data = JSON.parse(await request(options));
+        var data = await request(options);
         theia.window.showInformationMessage(data);
       } catch (error) {
         theia.window.showErrorMessage(`Unable to invoke service request: ${error}`);
